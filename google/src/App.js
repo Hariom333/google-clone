@@ -1,10 +1,21 @@
 import './App.css';
+import Home from './pages/Home'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import SearchPage from './pages/SearchPage'
 
 function App() {
   return (
-    <div className="App">
-      <p>lets go google clone</p>
-    </div>
+    <BrowserRouter>
+      <div className="App">
+
+        <Routes>
+          <Route path="/search" element={<SearchPage />} />
+          <Route path="test" element={<Home />} />
+
+        </Routes>
+
+      </div>
+    </BrowserRouter>
   );
 }
 
